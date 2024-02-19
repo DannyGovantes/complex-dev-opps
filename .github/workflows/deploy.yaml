@@ -18,7 +18,7 @@ jobs:
       - run: docker build -t dannygovantes/multi-server ./server
       - run: docker build -t dannygovantes/multi-worker ./worker
 
-      - run: docker push dannygovantes/devops/multi-client
-      - run: docker push dannygovantes/devops/multi-nginx
-      - run: docker push dannygovantes/devops/multi-server
-      - run: docker push dannygovantes/devops/multi-worker  
+      - run: docker push dannygovantes/multi-client
+      - run: docker push dannygovantes/multi-nginx
+      - run: docker push dannygovantes/multi-server
+      - run: docker push dannygovantes/multi-worker  
