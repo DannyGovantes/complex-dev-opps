@@ -13,10 +13,10 @@ jobs:
       - run: docker build -t dannygovantes/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true dannygovantes/react-test npm test
 
-      - run: docker build -t dannygovantes/devops/multi-client ./client
-      - run: docker build -t dannygovantes/devops/multi-nginx ./nginx
-      - run: docker build -t dannygovantes/devops/multi-server ./server
-      - run: docker build -t dannygovantes/devops/multi-worker ./worker
+      - run: docker build -t dannygovantes/multi-client ./client
+      - run: docker build -t dannygovantes/multi-nginx ./nginx
+      - run: docker build -t dannygovantes/multi-server ./server
+      - run: docker build -t dannygovantes/multi-worker ./worker
 
       - run: docker push dannygovantes/devops/multi-client
       - run: docker push dannygovantes/devops/multi-nginx
