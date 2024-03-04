@@ -18,10 +18,10 @@ jobs:
       - run: docker build -t dannygovantes/multi-server ./server
       - run: docker build -t dannygovantes/multi-worker ./worker
 
-      - run: docker push dannygovantes/multi-client
-      - run: docker push dannygovantes/multi-nginx
-      - run: docker push dannygovantes/multi-server
-      - run: docker push dannygovantes/multi-worker
+      - run: docker push dannygovantes/multi-client:latest
+      - run: docker push dannygovantes/multi-nginx:latest
+      - run: docker push dannygovantes/multi-server:latest
+      - run: docker push dannygovantes/multi-worker:latest
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
